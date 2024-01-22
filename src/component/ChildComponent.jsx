@@ -8,5 +8,7 @@ function ChildComponent(props) {
     </div>
   );
 }
-
+ChildComponent.defaultProps={
+    name:"John"
+}
 export default ChildComponent;
