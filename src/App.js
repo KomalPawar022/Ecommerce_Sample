@@ -1,15 +1,13 @@
-import "./styles.css";
-import Home from "./component/Home.js";
-import ConditionalComponent from "./component/ConditionalComponent";
-import ParentComponent from "./component/ParentComponent";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./component/Home";
+import img from "./assets/bg.jpg";
 
-export default function App() {
+function App() {
   return (
-    <div className="App">
-      <ConditionalComponent />
-      <ParentComponent />
-
-      <Home />
-    </div>
+    <>
+      <Home image={img} />
+    </>
   );
 }
+
+export default App;

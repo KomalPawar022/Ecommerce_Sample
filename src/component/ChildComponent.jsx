@@ -1,14 +1,12 @@
 import React from "react";
+import GrandChildComponent from "./GrandChildComponent";
 
-function ChildComponent(props) {
+const ChildComponent = ({ data }) => {
   return (
     <div>
-      <p>Name: {props.name}</p>
-      <p>Age: {props.age}</p>
+      <GrandChildComponent data={data} />
     </div>
   );
-}
-ChildComponent.defaultProps={
-    name:"John"
-}
+};
+
 export default ChildComponent;

@@ -1,13 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import ChildComponent from "./ChildComponent";
 
-class ParentComponent extends Component {
-  render() {
-    //const name = "John Doe";
-    const age = 25;
+const ParentComponent = () => {
+  const data = "Hello, Prop Drilling!";
 
-    return <ChildComponent age={age} />;
-  }
-}
+  return (
+    <div>
+      <ChildComponent data={data} />
+    </div>
+  );
+};
 
 export default ParentComponent;
