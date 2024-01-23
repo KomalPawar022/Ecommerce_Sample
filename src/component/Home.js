@@ -1,8 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = ({ image }) => {
   return (
     <div className="hero">
+      <Link to="about" className="m-1">
+        About{" "}
+      </Link>
+      <Link to="contact" className="m-1">
+        Contact{" "}
+      </Link>
+      <Link to="product" className="m-1">
+        Product{" "}
+      </Link>
       <div className="card bg-dark text-white border-0">
         <img src={image} className="card-img" alt="Background" height="550px" />
         <div className="card-img-overlay d-flex flex-column justify-content-center">
@@ -27,3 +37,17 @@ const Home = ({ image }) => {
 };
 
 export default Home;
+
+// import { Link } from "react-router-dom";
+
+// function Home() {
+//   return (
+//     <div>
+//       <h1>This is the home page</h1>
+//       <Link to="about">Click to view our about page</Link>
+//       <Link to="contact">Click to view our contact page</Link>
+//     </div>
+//   );
+// }
+
+// export default Home;
