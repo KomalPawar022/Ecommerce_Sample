@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 function About() {
   return (
@@ -11,6 +12,7 @@ function About() {
       accusantium est. Pariatur rerum ex itaque neque. Modi asperiores eius vel
       perferendis itaque voluptatibus alias! Voluptatum sint modi facere itaque
       ipsa libero tenetur deserunt rem.
+      <Outlet />
     </div>
   );
 }

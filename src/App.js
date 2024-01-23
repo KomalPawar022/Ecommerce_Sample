@@ -13,10 +13,11 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home image={img} />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />}>
+            <Route path="contact" element={<Contact />} />
+            <Route path="product" element={<Product />} />
+          </Route>
           <Route path="*" element={<div>Page Not Found</div>} />
-          <Route path="product" element={<Product />} />
         </Routes>
       </div>
     </Router>
