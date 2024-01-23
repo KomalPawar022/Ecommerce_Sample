@@ -1,4 +1,4 @@
-import React,{Compont} from "react";
+import React, { Component } from "react";
 
 class StateComponent extends Component {
   constructor(props) {
@@ -7,14 +7,19 @@ class StateComponent extends Component {
       counter: 0,
     };
   }
-  render(){
+  render() {
     return (
-        <div>
-            Counter:{this.state.counterh}
-        <button></button>
-        </div>
+      <div>
+        <h1>Counter: {this.state.counter}</h1>
+        <button
+          className="btn btn-primary"
+          onClick={() => this.setState({ counter: this.state.counter + 1 })}
+        >
+          Increment
+        </button>
+      </div>
     );
   }
 }
 
-export default  StateComponent;
+export default StateComponent;
