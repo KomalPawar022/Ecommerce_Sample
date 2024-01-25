@@ -1,35 +1,27 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./component/Home";
-import img from "./assets/bg.jpg";
-import About from "./component/About";
-import Contact from "./component/Contact";
-import Product from "./component/Product";
+import "./styles.css";
 
-import { OrdersComponent } from "./component/orders/OrdersComponent";
-import { OrderDetails } from "./component/orders/OrderDetails";
-import { DefaultChild } from "./component/orders/DefaultChild";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+// BELOW COMPONENTS
+// import Home from "./component/Home";
+// //import Navbar from "./component/Navbar";
+// import Products from "./component/Products";
+// import Product from "./component/Product";
+// import Cart from "./component/cart";
+import Form from "./component/Form";
+
+export default function App() {
   return (
-    <Router>
-      <div className="App">
+    <>
+      {/* <Router>
         <Routes>
-          <Route path="/" element={<Home image={img} />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="product" element={<Product />} />
-          <Route path="*" element={<div>Page Not Found</div>} />
-
-          <Route path="Orders" element={<OrdersComponent />}>
-            <Route index element={<DefaultChild />} />
-            <Route path=":orderid" element={<OrderDetails />} />
-          </Route>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/Products" element={<Products />} />
+          <Route exact path="/Products/:id" element={<Product />} />
+          <Route exact path="/Cart" element={<Cart />} />
         </Routes>
-      </div>
-    </Router>
+      </Router> */}
+      <Form />
+    </>
   );
 }
-
-export default App;

@@ -1,26 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const Product = () => {
-  const [price, setPrice] = useState(0);
   const info = {
-    id: 3,
-    title: "Mens Cotton Jacket",
-    price: 55.99,
-    description:
-      "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
     category: "men's clothing",
-    image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-    rating: {
-      rate: 4.7,
-      count: 500,
-    },
+    description:
+      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    id: 1,
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    price: 109.95,
+    rating: { rate: 3.9, count: 120 },
+    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
   };
-  const handleClickAdd = () => {
-    setPrice((prevCount) => prevCount + 1);
-  };
-  const handleClickSub = () => {
-    setPrice((prevCount) => prevCount - 1);
+  const handleClick = () => {
+    alert("Item added to cart");
   };
 
   return (
@@ -37,12 +30,7 @@ const Product = () => {
         <h3 className="display-6 fw-bold my-4">$ {info.price}</h3>
         <p className="lead">{info.description}</p>
         <div className="container d-flex justify-content-evenly p-2 ">
-          <button onClick={handleClickAdd}>+</button>
-          <div>
-            {price * info.price} ${" "}
-            {price === 0 ? true : <div>for {price} items</div>}
-          </div>
-          <button onClick={handleClickSub}>-</button>
+          <button onClick={handleClick}>Add to cart</button>
         </div>
       </div>
     </div>
