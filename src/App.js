@@ -8,12 +8,12 @@ import Home from "./component/Home";
 import Products from "./component/Products";
 import Product from "./component/Product";
 import Cart from "./component/cart";
-import { LifeCycleComponent } from "./component/LifeCycleComponent";
+import LifeCycleFunctionComponent from "./component/LifeCycleFunctionComponent";
 
 export default function App() {
   return (
     <>
-      <LifeCycleComponent />
+      <LifeCycleFunctionComponent />
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
